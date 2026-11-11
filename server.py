@@ -11,8 +11,17 @@ import ssl
 import threading
 import time
 from email.message import EmailMessage
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from socketserver import ThreadingMixIn
 from urllib.parse import unquote, urlparse
+
+try:
+    from http.server import ThreadingHTTPServer
+except ImportError:
+    class ThreadingHTTPServer(ThreadingMixIn, HTTPServer):
+        """Fallback for Python versions before 3.7."""
+        daemon_threads = True
+
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
