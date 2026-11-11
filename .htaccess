@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Send API and dynamic app routes to the Python server on this machine.
+RewriteRule ^api/(.*)$ http://127.0.0.1:8765/api/$1 [P,L]
+RewriteRule ^admin$ http://127.0.0.1:8765/admin [P,L]
+RewriteRule ^admin/(.*)$ http://127.0.0.1:8765/admin/$1 [P,L]

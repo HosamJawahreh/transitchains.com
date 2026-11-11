@@ -5,6 +5,7 @@ __pycache__/
 data/admin.json
 data/mail.json
 data/*.tmp
+logs/
 transitchains-website-assets.zip
 .env
 .env.*

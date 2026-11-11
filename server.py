@@ -105,7 +105,7 @@ def ensure_admin():
     salt = secrets.token_hex(16)
     write_json(ADMIN_PATH, {
         "salt": salt,
-        "hash": hash_password("TransitAdmin#2026", salt),
+        "hash": hash_password("TransitAdmin#2027", salt),
         "mustChange": True,
     })
 

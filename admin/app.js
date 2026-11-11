@@ -471,8 +471,15 @@
     }).then(function (data) {
       state.mustChange = !!data.mustChange;
       return boot();
-    }).catch(function () {
+    }).catch(function (err) {
       error.hidden = false;
+      if (err && err.status === 401) {
+        error.textContent = "That password is not correct.";
+      } else if (err && (err.status === 404 || err.status === 502 || err.status === 0)) {
+        error.textContent = "The site server is not running. Start server.py on the host, then try again.";
+      } else {
+        error.textContent = "Sign in failed. Check that the site server is running.";
+      }
     });
   });
 
