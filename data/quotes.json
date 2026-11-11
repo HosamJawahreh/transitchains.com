@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "b8808723b06b1adf",
+    "name": "Husam Aljawahreh",
+    "company": "Brand Makers",
+    "email": "hjweb96@gmail.com",
+    "phone": "0792009722",
+    "service": "land",
+    "message": "from amman to aqaba",
+    "status": "new",
+    "createdAt": "2026-11-11T19:15:13Z",
+    "emailed": false,
+    "emailError": "Add the SMTP host under Account so quotes can reach the office inbox",
+    "emailedAt": "2026-11-11T19:15:13Z"
+  }
+]
