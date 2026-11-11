@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | TransitChains</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#00131E">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css?v=deliver">
+  <style>
+    .missing {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 48px 20px;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(19, 206, 215, 0.16), transparent 34%),
+        linear-gradient(180deg, #00131e 0%, #031d29 100%);
+      text-align: center;
+    }
+    .missing-card {
+      width: min(520px, 100%);
+    }
+    .missing-card img {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 18px;
+    }
+    .missing-card h1 {
+      margin: 0 0 12px;
+      font-size: clamp(40px, 8vw, 64px);
+      letter-spacing: -0.04em;
+    }
+    .missing-card p {
+      margin: 0 auto 28px;
+      max-width: 36ch;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .missing-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="missing">
+    <div class="missing-card">
+      <img src="/assets/favicon.png" alt="">
+      <div class="logo-name" style="justify-content:center;margin-bottom:18px;"><span>Transit</span><span class="accent">Chains</span></div>
+      <h1>404</h1>
+      <p>This page is not part of the TransitChains website. Return home to continue.</p>
+      <div class="missing-actions">
+        <a class="btn btn-primary" href="/">Back to home</a>
+        <a class="btn btn-ghost" href="/#contact">Contact</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

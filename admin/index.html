@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TransitChains Dashboard</title>
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/admin/app.css?v=7">
+</head>
+<body>
+  <section class="login" id="login">
+    <form class="login-card" id="login-form">
+      <img src="/assets/favicon.png" alt="" width="52" height="52">
+      <h1>TransitChains</h1>
+      <p>Sign in to manage the website and quote requests.</p>
+      <label>
+        Password
+        <input type="password" name="password" autocomplete="current-password" required>
+      </label>
+      <p class="form-error" id="login-error" hidden>That password is not correct.</p>
+      <button type="submit">Sign in</button>
+    </form>
+  </section>
+
+  <div class="shell" id="app" hidden>
+    <aside class="side">
+      <a class="brand" href="/admin">
+        <img src="/assets/favicon.png" alt="" width="36" height="36">
+        <span>TransitChains<small>Dashboard</small></span>
+      </a>
+      <nav class="side-nav" aria-label="Dashboard">
+        <p class="nav-label">Overview</p>
+        <button type="button" data-view="overview">Overview</button>
+        <button type="button" data-view="quotes">Quotes <span id="new-count" hidden>0</span></button>
+        <p class="nav-label">Website</p>
+        <button type="button" data-view="sections">Sections</button>
+        <button type="button" data-view="content">Content</button>
+        <button type="button" data-view="details">Contact &amp; stats</button>
+        <p class="nav-label">Settings</p>
+        <button type="button" data-view="account">Account</button>
+      </nav>
+      <a class="site-link" href="/" target="_blank" rel="noopener">View website</a>
+    </aside>
+    <div class="workspace">
+      <header class="top">
+        <div>
+          <p class="eyebrow" id="eyebrow">Inbox</p>
+          <h2 id="view-title">Quotes</h2>
+        </div>
+        <button type="button" class="ghost" id="logout">Sign out</button>
+      </header>
+      <div id="notice" class="notice" hidden></div>
+      <div id="view"></div>
+    </div>
+  </div>
+  <script src="/admin/app.js?v=7" defer></script>
+</body>
+</html>
