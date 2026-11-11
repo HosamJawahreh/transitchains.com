@@ -113,9 +113,9 @@ def ensure_admin():
 def default_mail():
     return {
         "enabled": True,
-        "host": os.environ.get("TC_SMTP_HOST", ""),
+        "host": os.environ.get("TC_SMTP_HOST", "mail.transitchains.com"),
         "port": int(os.environ.get("TC_SMTP_PORT", "587") or 587),
-        "username": os.environ.get("TC_SMTP_USER", ""),
+        "username": os.environ.get("TC_SMTP_USER", "info@transitchains.com"),
         "password": os.environ.get("TC_SMTP_PASS", ""),
         "useTls": True,
         "useSsl": False,
